@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 
 
-  
+
   #when get request made to /show url, the secrets controller will perform its show method
   get '/show' => 'secrets#show'
 
