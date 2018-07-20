@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
 
   def create
     session[:user_id]=params[:user_id]
-    redirect_to root_path
+    @user=User.find(params[:user_id])
+    redirect_to user_path()
   end
 
 
@@ -17,5 +18,5 @@ class SessionsController < ApplicationController
     session[:user_id] ||= session[:user_id]=[]
   end
 
-  
+
 end
