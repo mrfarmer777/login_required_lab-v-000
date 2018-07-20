@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-    #get the session user_id if there is one, otherwise, set it equal to an empty array
+    #get the session user_id if there is one, otherwise return nil
     session[:name]
   end
 end
