@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     if params[:name].present?
       session[:name]=params[:name]
-      redirect_to secret_path
+      redirect_to show_path
     else
       redirect_to sessions_new_path
     end
